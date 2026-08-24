@@ -215,10 +215,27 @@ body {
 
 
 @media (max-width: 650px) {
+
+  
   .social-grid {
-    grid-template-columns: 1fr !important; 
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  
+  .social-card {
+    padding: 8px 4px !important;    
+    font-size: 0.75rem !important;  
+    gap: 5px !important;            
+    justify-content: center;
+    text-align: center;
+  }
+
+    .social-card i {
+    font-size: 1rem !important;
   }
 }
+
 
 .whatsapp-float {
   position: fixed;
