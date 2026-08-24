@@ -213,10 +213,10 @@ body {
 .social-telegram { background: #0088cc; }
 .social-tiktok { background: #000000; border: 1px solid #333; }
 
-/* REGLA PARA MÓVILES: Apila los botones dentro del margen sin desbordar */
+
 @media (max-width: 650px) {
   .social-grid {
-    grid-template-columns: 1fr !important; /* 1 sola columna a lo ancho */
+    grid-template-columns: 1fr !important; 
   }
 }
 
