@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaktor IR - Sitio Oficial</title>
+
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+ 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <div class="smoke-background">
+    <div class="light-spot spot-1"></div>
+    <div class="light-spot spot-2"></div>
+    <div class="light-spot spot-3"></div>
+  </div>
+
+  
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    
+    
+    <div class="logo-container">
+      
+      <img src="img/Reaktor.png" alt="Reaktor-IR Logo" class="brand-logo" onerror="this.src='https://via.placeholder.com/180/111827/d97706?text=REAKTOR+IR'">
+    </div>
+
+    <p><span class="hero-tag"><i class="fa-solid fa-guitar"></i> Comunidad & Proyectos</span></p>
+    <p class="hero-description">Bienvenido a nuestra plataforma oficial. Espacio dedicado a compartir nuestros proyectos, información actualizada y redes de contacto.</p>
+  </header>
+
+  
+  <main class="container">
+
+    
+<section class="card">
+  <h2 class="section-title"><i class="fa-solid fa-bolt"></i> Sobre Nuestro Grupo</h2>
+  <p class="about-text">
+    Somos una banda apasionada por la energía y la fuerza del <strong>Rock Latino</strong>. Nos especializamos en revivir los grandes e inolvidables éxitos, transformando cada presentación en una verdadera fiesta llena de ritmo, distorsión y nostalgia.
+  </p>
+  <p class="about-text" style="margin-top: 15px;">
+    Llevamos la mejor vibra para amenizar todo tipo de eventos y celebraciones privadas. Nuestro objetivo es conectar con el público, hacer cantar a todos a todo pulmón y garantizar una noche épica a puro rock.
+  </p>
+</section>
+
+    
+    <section class="card">
+      <h2 class="section-title"><i class="fa-solid fa-record-vinyl"></i> Galería de Actividades</h2>
+      <div class="carousel-container">
+        <div class="carousel-slide" id="slider">
+          
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Concierto / Evento 1">
+          <img src="img/f1.jpg">
+          <img src="img/f2.jpg">
+          <img src="img/f3.jpg">
+          <img src="img/f4.jpg">
+          <img src="img/f5.jpg">
+        </div>
+        
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    
+    <section class="card">
+      <h2 class="section-title"><i class="fa-solid fa-hashtag"></i> Conéctate con Nosotros</h2>
+      <p>Síguenos en nuestras plataformas oficiales para estar al día con las últimas novedades:</p>
+
+      <div class="social-grid">
+        
+        <a href="https://www.facebook.com/share/1Gj37fr3C5/" class="social-card social-facebook" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a href="https://instagram.com" class="social-card social-instagram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=C07meEtjAQg" class="social-card social-youtube" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+
+        <a href="https://tiktok.com" class="social-card social-tiktok" target="_blank" rel="noopener">
+          <i class="fa-brands fa-tiktok"></i>
+          <span>TikTok</span>
+        </a>
+
+        <a href="https://t.me" class="social-card social-telegram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-telegram"></i>
+          <span>Telegram</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <a href="https://wa.me/59100000000?text=Hola%20Reaktor-IR,%20quisiera%20más%20información" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Contactar por WhatsApp</span>
+  </a>
+
+  
+  <footer>
+    <p>&copy; 2026 REAKTOR. Todos los derechos reservados.</p>
+  </footer>
+
+  
+    
+  
+  
+  
+  <script>
+    const slider = document.getElementById('slider');
+    const images = slider.querySelectorAll('img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let counter = 0;
+
+    
+    function updateCarousel() {
+      const size = images[0].clientWidth;
+      slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+
+    
+    nextBtn.addEventListener('click', () => {
+      if (counter >= images.length - 1) {
+        counter = 0;
+      } else {
+        counter++;
+      }
+      updateCarousel();
+    });
+
+    
+    prevBtn.addEventListener('click', () => {
+      if (counter <= 0) {
+        counter = images.length - 1;
+      } else {
+        counter--;
+      }
+      updateCarousel();
+    });
+
+    
+    setInterval(() => {
+      nextBtn.click();
+    }, 5000);
+
+    
+    window.addEventListener('resize', updateCarousel);
+  </script>
+
+
+
+
+</body>
+</html>

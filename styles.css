@@ -1,0 +1,630 @@
+/* =========================================================
+   VARIABLES DE COLOR Y ESTILOS GLOBALES (Dark / Rock Elegante)
+   ========================================================= */
+:root {
+  --bg-main: #0a0a0c;        /* Fondo general súper oscuro */
+  --card-bg: #121318;        /* Fondo de tarjetas gris carbón */
+  --card-border: #262833;    /* Bordes sutiles metálicos */
+  --primary: #d97706;        /* Color cobre / ámbar metálico para detalles */
+  --primary-glow: rgba(217, 119, 6, 0.4);
+  --text-main: #e2e8f0;      /* Texto principal gris claro */
+  --text-muted: #94a3b8;     /* Texto secundario */
+  --font-title: 'Cinzel', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   PORTADA / HERO SECTION
+   ========================================================= */
+.hero {
+  position: relative;
+  background: radial-gradient(circle at center, #1e1b18 0%, #0a0a0c 100%);
+  text-align: center;
+  padding: 60px 20px 70px;
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* LOGO CON EFECTO ROTATIVO INTERMITENTE */
+.logo-container {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.brand-logo {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 70%;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+  
+  /* Animación: dura 12s, infinita, suave */
+  animation: logoRotateGlow 12s infinite ease-in-out;
+}
+
+/* Reglas de la animación de la imagen */
+@keyframes logoRotateGlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+  25% {
+    /* Giro suave a 360 y pulso leve */
+    transform: rotate(360deg) scale(1.05);
+    box-shadow: 0 0 30px var(--primary);
+  }
+  50% {
+    /* Pausa fija con resplandor amplio */
+    transform: rotate(360deg) scale(1);
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+  75% {
+    /* Giro inverso parcial */
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 0 0 25px var(--primary);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+}
+
+/* =========================================================
+   PORTADA / HERO SECTION (Fondo transparente para ver la animación)
+   ========================================================= */
+.hero {
+  position: relative;
+  /* Cambiamos el degradado sólido por un fondo semi-transparente */
+  background: rgba(10, 10, 12, 0.4); 
+  backdrop-filter: blur(5px); /* Opcional: le da un toque elegante de cristal/desenfoque */
+  text-align: center;
+  padding: 60px 20px 70px;
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/*.hero-tag {
+  background-color: rgba(217, 119, 6, 0.15);
+  color: var(--primary);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 15px;
+  border: 1px solid var(--primary);
+}*/
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* =========================================================
+   CONTENEDORES Y TARJETAS
+   ========================================================= */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 1px;
+}
+
+.section-title i {
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   CARRUSEL DE FOTOS (Efecto Fade / Transición Suave)
+   =========================================================
+.carousel-container {
+  position: relative;
+  height: 380px; /* Altura fija del contenedor
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  margin-top: 15px;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Todas las imágenes se enciman y se ocultan 
+.carousel-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* Transición suave de fundido 
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Solo la imagen activa se muestra con opacidad 1 
+.carousel-slide img.active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 10, 12, 0.8);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10; /* Asegura que los botones queden sobre las fotos 
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+/* Ajuste para pantallas móviles 
+@media (max-width: 600px) {
+  .carousel-container { height: 240px; }
+} */
+
+
+/* =========================================================
+   CARRUSEL DE FOTOS
+   ========================================================= */
+.carousel-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  margin-top: 15px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(0.9) contrast(1.1); /* Toque de saturación / contraste */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 10, 12, 0.8);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+
+/* =========================================================
+   GRID DE REDES SOCIALES (3 arriba y 2 abajo)
+   ========================================================= */
+.social-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* Fuerza 3 columnas */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.social-card i {
+  font-size: 1.4rem;
+}
+
+.social-facebook { background: #1877f2; }
+.social-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-youtube { background: #cd201f; }
+.social-telegram { background: #0088cc; }
+.social-tiktok { background: #000000; border: 1px solid #333; }
+
+/* =========================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  background-color: #20ba5a;
+}
+
+.whatsapp-float i {
+  font-size: 1.6rem;
+}
+
+/* =========================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--card-border);
+}
+
+/* =========================================================
+   ADAPTACIÓN A PANTALLAS MÓVILES (RESPONSIVE)
+   ========================================================= */
+@media (max-width: 600px) {
+  .brand-logo { width: 130px; height: 130px; }
+  .card { padding: 20px; }
+  .carousel-slide img { height: 240px; }
+  .whatsapp-float span { display: none; }
+  .whatsapp-float { padding: 15px; border-radius: 50%; }
+}
+
+
+
+/* =========================================================
+   FONDO ANIMADO: HUMO Y LUCES DE ESCENARIO (CSS PURO)
+   ========================================================= */
+
+/* Contenedor fijo que cubre toda la pantalla detrás del contenido */
+.smoke-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Se coloca detrás de las tarjetas y el contenido */
+  background-color: #070709; /* Fondo base ultra oscuro */
+  overflow: hidden;
+}
+
+/* Luces / Halos de niebla */
+.light-spot {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Crea el efecto difuminado de humo/niebla */
+  opacity: 0.35;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Luz 1: Ámbar / Cobre en la esquina superior izquierda */
+.spot-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #d97706 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  animation: moveSpot1 12s infinite alternate;
+}
+
+/* Luz 2: Rojo Vinotinto / Fuego en el centro derecho */
+.spot-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #7f1d1d 0%, transparent 70%);
+  top: 40%;
+  right: -150px;
+  animation: moveSpot2 15s infinite alternate;
+}
+
+/* Luz 3: Cobre cálido en la parte inferior */
+.spot-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #b45309 0%, transparent 70%);
+  bottom: -100px;
+  left: 30%;
+  animation: moveSpot3 10s infinite alternate;
+}
+
+
+/* =========================================================
+   FONDO ANIMADO: DESTELLOS Y LUCES DE ESCENARIO (OPCIÓN 3)
+   ========================================================= */
+
+/* Contenedor fijo de fondo */
+.stage-lights {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #08080a;
+  overflow: hidden;
+}
+
+/* Reflector Izquierdo (Haz de luz diagonal) */
+.beam-left {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50vw;
+  height: 120vh;
+  background: conic-gradient(from 120deg at 0% 0%, rgba(217, 119, 6, 0.25) 0deg, transparent 60deg);
+  filter: blur(30px);
+  transform-origin: top left;
+  animation: sweepLeft 8s infinite alternate ease-in-out;
+}
+
+/* Reflector Derecho (Haz de luz diagonal) */
+.beam-right {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 50vw;
+  height: 120vh;
+  background: conic-gradient(from 240deg at 100% 0%, rgba(180, 83, 9, 0.25) 0deg, transparent 60deg);
+  filter: blur(30px);
+  transform-origin: top right;
+  animation: sweepRight 10s infinite alternate ease-in-out;
+}
+
+/* Destello Central Pulsante (Punto focal detrás del contenido) */
+.pulse-center {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.35) 0%, rgba(127, 29, 29, 0.15) 50%, transparent 70%);
+  filter: blur(50px);
+  animation: stagePulse 6s infinite ease-in-out;
+}
+
+/* =========================================================
+   ANIMACIONES DE BARRIDO Y RÁFAGAS
+   ========================================================= */
+
+/* Movimiento de barrido del reflector izquierdo */
+@keyframes sweepLeft {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7; /* Ráfaga de luz brillante */
+  }
+  100% {
+    transform: rotate(18deg);
+    opacity: 0.2;
+  }
+}
+
+/* =========================================================
+   FONDO ANIMADO: HUMO Y LUCES DE ESCENARIO (CSS PURO)
+   ========================================================= */
+
+/* Contenedor fijo que cubre toda la pantalla detrás del contenido */
+.smoke-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Se coloca detrás de las tarjetas y el contenido */
+  background-color: #070709; /* Fondo base ultra oscuro */
+  overflow: hidden;
+}
+
+/* Luces / Halos de niebla */
+.light-spot {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Crea el efecto difuminado de humo/niebla */
+  opacity: 0.35;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Luz 1: Ámbar / Cobre en la esquina superior izquierda */
+.spot-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #d97706 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  animation: moveSpot1 12s infinite alternate;
+}
+
+/* Luz 2: Rojo Vinotinto / Fuego en el centro derecho */
+.spot-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #7f1d1d 0%, transparent 70%);
+  top: 40%;
+  right: -150px;
+  animation: moveSpot2 15s infinite alternate;
+}
+
+/* Luz 3: Cobre cálido en la parte inferior */
+.spot-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #b45309 0%, transparent 70%);
+  bottom: -100px;
+  left: 30%;
+  animation: moveSpot3 10s infinite alternate;
+}
+
+/* =========================================================
+   CORRECCIÓN DE ANIMACIÓN (OPCIÓN 2 - HUMO / LUCES)
+   ========================================================= */
+
+.smoke-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #070709;
+  overflow: hidden;
+}
+
+.light-spot {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+}
+
+/* Luz 1: Cobre */
+.spot-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #d97706 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  /* Animación: nombre | duración | infinita | alternada */
+  animation: moveSpot1 8s infinite alternate ease-in-out;
+}
+
+/* Luz 2: Rojo Vinotinto */
+.spot-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #7f1d1d 0%, transparent 70%);
+  top: 30%;
+  right: -150px;
+  animation: moveSpot2 10s infinite alternate ease-in-out;
+}
+
+/* Luz 3: Ámbar */
+.spot-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #b45309 0%, transparent 70%);
+  bottom: -100px;
+  left: 20%;
+  animation: moveSpot3 7s infinite alternate ease-in-out;
+}
+
+/* Movimientos declarados */
+@keyframes moveSpot1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(180px, 120px) scale(1.3); }
+}
+
+@keyframes moveSpot2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-150px, -100px) scale(1.2); }
+}
+
+@keyframes moveSpot3 {
+  0% { transform: translate(0, 0) scale(0.9); }
+  100% { transform: translate(120px, -80px) scale(1.25); }
+}
+
+/* Estilo para los párrafos de Sobre Nosotros */
+.about-text {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-text strong {
+  color: var(--primary); /* Resalta "Rock Latino" con el color cobre metálico */
+}
