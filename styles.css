@@ -220,8 +220,10 @@ body {
 .social-tiktok { background: #000000; border: 1px solid #333; }
 
 @media (max-width: 650px) {
-  .social-grid {
-    grid-template-columns: 1fr !important; 
+  .carousel-slide img {
+    height: 250px;           
+    object-fit: contain;     
+    background-color: #000; 
   }
 }
 
