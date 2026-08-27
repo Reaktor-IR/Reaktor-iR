@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reaktor IR - Sitio Oficial</title>
+  <title>Reaktor - Sitio Oficial</title>
 
  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,168 @@
   <p class="about-text" style="margin-top: 15px;">
     Llevamos la mejor vibra para amenizar todo tipo de eventos y celebraciones privadas. Nuestro objetivo es conectar con el público, hacer cantar a todos a todo pulmón y garantizar una noche épica a puro rock.
   </p>
+
+  </section>
+
+<section class="card members-section">
+  <h2 class="section-title">
+    <i class="fa-solid fa-users-line"></i> Integrantes
+  </h2>
+  
+  <div class="members-grid">
+
+    <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Nombre Artista 1', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
+      <div class="member-img-wrapper">
+        <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Nombre Artista 1</h3>
+        <p>Voz Principal</p>
+
+        
+    
+      </div>
+    </div>
+
+    <div class="member-card" onclick="openMemberModal('img/G_lider.jpg', 'Tu Nombre', 'Guitarra Líder', 'https://facebook.com/usuario3', ' Encargado de los riffs, armonías y solos icónicos que le dan la fuerza y el espíritu al sonido de Reaktor. ¡Visita mi página para ver más sobre mi, econtrarás videos de mis solos y grupos donde he estado antes, proyectos personales y más!')">
+      <div class="member-img-wrapper">
+        <img src="img/G_lider.jpg" alt="Guitarra Líder" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Tu Nombre</h3>
+        <p>Guitarra Líder</p>
+
+         
+
+      </div>
+    </div>
+
+    <div class="member-card" onclick="openMemberModal('img/Bajo.jpg', 'Nombre Artista 2', 'Bajo & Coros', 'https://facebook.com/usuario2', 'Base rítmica, líneas de bajo y coros.')">
+      <div class="member-img-wrapper">
+        <img src="img/Bajo.jpg" alt="Bajo & Coros" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Nombre Artista 2</h3>
+        <p>Bajo & Coros</p>
+
+         
+      </div>
+    </div>
+
+    <div class="member-card" onclick="openMemberModal('img/Bateria.jpg', 'Nombre Artista 4', 'Batería / Percusión', 'https://facebook.com/usuario4', 'El motor rítmico de la banda.')">
+      <div class="member-img-wrapper">
+        <img src="img/Bateria.jpg" alt="Batería / Percusión" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Nombre Artista 4</h3>
+        <p>Batería / Percusión</p>
+         
+      </div>
+    </div>
+
+    <div class="member-card" onclick="openMemberModal('img/Trompeta.jpg', 'Nombre Artista 5', 'Trompeta / Vientos', 'https://facebook.com/usuario5', 'Arreglos de vientos y potencia en vivo.')">
+      <div class="member-img-wrapper">
+        <img src="img/Trompeta.jpg" alt="Trompeta / Vientos" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Nombre Artista 5</h3>
+        <p>Trompeta / Vientos</p>
+         
+      </div>
+    </div>
+
+    <div class="member-card" onclick="openMemberModal('img/Teclado.jpg', 'Nombre Artista 6', 'Teclado', 'https://facebook.com/usuario6', 'Armonías y sintetizadores.')">
+      <div class="member-img-wrapper">
+        <img src="img/Teclado.jpg" alt="Teclado" class="member-img">
+        <div class="member-overlay">
+          <i class="fa-solid fa-expand expand-icon"></i>
+        </div>
+      </div>
+      <div class="member-info">
+        <h3>Nombre Artista 6</h3>
+        <p>Teclado</p>
+         
+      </div>
+    </div>
+
+  </div> 
+
 </section>
+
+<dialog id="memberModal" class="member-modal">
+  <div class="modal-content">
+    <!-- Botón para cerrar el cuadro flotante (X) -->
+    <button class="close-modal-btn" onclick="closeMemberModal()">&times;</button>
+    
+    <img id="modalImg" src="" alt="Foto Integrante" class="modal-img">
+    
+    <div class="modal-body">
+      <h3 id="modalName">Nombre del Artista</h3>
+      <p id="modalRole">Rol / Instrumento</p>
+
+      <p id="modalBio" class="modal-bio">Descripción del integrante...</p>
+      
+      
+      <a id="modalFbBtn" href="#" target="_blank" rel="noopener" class="modal-fb-btn">
+        <i class="fa-brands fa-facebook"></i> Visitar Facebook
+      </a>
+    </div>
+  </div>
+</dialog>
+
+
+<script>
+  
+  function openMemberModal(imageSrc, name, role, facebookUrl, bioText) {
+  const modal = document.getElementById('memberModal');
+    
+  
+    document.getElementById('modalImg').src = imageSrc;
+  document.getElementById('modalName').innerText = name;
+  document.getElementById('modalRole').innerText = role;
+  document.getElementById('modalFbBtn').href = facebookUrl;
+
+   
+  const modalBio = document.getElementById('modalBio');
+  if (modalBio) {
+    modalBio.innerText = bioText || "";
+  }
+    
+    
+    modal.showModal();
+  }
+
+  
+  function closeMemberModal() {
+    const modal = document.getElementById('memberModal');
+    modal.close();
+  }
+
+  document.getElementById('memberModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      closeMemberModal();
+    }
+  });
+</script>
+
+
+
+
 
     
     <section class="card">
@@ -88,14 +249,25 @@
           <i class="fa-brands fa-instagram"></i>
           <span>Instagram</span>
         </a>
-
-        <a href="https://tiktok.com" class="social-card social-tiktok" target="_blank" rel="noopener">
+        <a href="https://www.tiktok.com/@reaktor_bolivia?_r=1&_t=ZS-99EfEnIVS6e" class="social-card social-tiktok" target="_blank" rel="noopener">
           <i class="fa-brands fa-tiktok"></i>
           <span>TikTok</span>
         </a>
 
-        </div>
+        <!--<a href="https://www.youtube.com/watch?v=C07meEtjAQg" class="social-card social-youtube" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube"></i>
+          <span>YouTube</span>
+        </a>-->
+
+        
+      </div>
     </section>
+
+
+    
+
+
+
 
   </main>
 
