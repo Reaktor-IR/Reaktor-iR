@@ -54,217 +54,120 @@
 
   </section>
 
-  <!-- ========================================================= -->
-<!-- SECCIÓN: INTEGRANTES DE LA BANDA (Efecto Modal al Clic)   -->
-<!-- ========================================================= -->
-<!-- Comentario HTML: Sección principal que agrupa el bloque de miembros de la banda -->
-<!-- Etiqueta <section>: Agrupa contenido relacionado. Clases 'card members-section': Aplica estilos de tarjeta contenedora y márgenes de sección -->
 <section class="card members-section">
-  <!-- Comentario HTML: Título descriptivo de la sección -->
-  <!-- Etiqueta <h2>: Encabezado de nivel 2. Clase 'section-title': Define el tamaño, color y alineación del título -->
   <h2 class="section-title">
-    <!-- Etiqueta <i>: Icono FontAwesome. Clases 'fa-solid fa-users-line': Dibuja un icono de grupo de usuarios junto al título -->
     <i class="fa-solid fa-users-line"></i> Integrantes
-  <!-- Cierre de la etiqueta de encabezado <h2> -->
   </h2>
   
-  <!-- Comentario HTML: Contenedor que activa la cuadrícula (Grid) para organizar en columnas y filas -->
-  <!-- Etiqueta <div>: Contenedor principal. Clase 'members-grid': Aplica la regla CSS display: grid con 3 columnas -->
   <div class="members-grid">
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 1 (Voz Principal) -->
-    <!-- Etiqueta <div>: Tarjeta interactiva. Clase 'member-card': Aplica estilos de tarjeta. Evento 'onclick': Llama a 'openMemberModal' pasando foto, nombre, rol, enlace a Facebook y biografía -->
     <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Nombre Artista 1', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
-      <!-- Etiqueta <div>: Envoltorio de imagen. Clase 'member-img-wrapper': Controla el recortado, dimensiones y posición relativa de la foto -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Muestra la foto. Atributos 'src' (ruta), 'alt' (texto alternativo). Clase 'member-img': Ajuste visual de la foto -->
         <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
-        <!-- Etiqueta <div>: Capa superpuesta. Clase 'member-overlay': Capa oscura o translúcida visible al pasar el cursor (hover) -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Clases 'fa-solid fa-expand expand-icon': Icono de FontAwesome que indica que se puede expandir/abrir -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre de <div> con clase 'member-overlay' -->
         </div>
-      <!-- Cierre de <div> con clase 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Contenedor de datos. Clase 'member-info': Define sangría y espaciado para los textos descriptivos -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Encabezado de nivel 3 con el nombre del artista -->
         <h3>Nombre Artista 1</h3>
-        <!-- Etiqueta <p>: Párrafo que indica el rol del integrante en la banda -->
         <p>Voz Principal</p>
 
         
     
-      <!-- Cierre de <div> con clase 'member-info' -->
       </div>
-    <!-- Cierre del <div> con clase 'member-card' (Integrante 1) -->
     </div>
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 3 (Guitarra Líder) -->
-    <!-- Etiqueta <div>: Tarjeta de la guitarra líder. Evento 'onclick': Invoca la función JS del modal con los datos del Guitarrista -->
     <div class="member-card" onclick="openMemberModal('img/G_lider.jpg', 'Tu Nombre', 'Guitarra Líder', 'https://facebook.com/usuario3', ' Encargado de los riffs, armonías y solos icónicos que le dan la fuerza y el espíritu al sonido de Reaktor. ¡Visita mi página para ver más sobre mi, econtrarás videos de mis solos y grupos donde he estado antes, proyectos personales y más!')">
-      <!-- Etiqueta <div>: Envoltorio para mantener la relación de aspecto de la foto -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Carga la foto 'img/integrante3.jpg' con texto alternativo 'Guitarra Líder' y clase 'member-img' -->
         <img src="img/G_lider.jpg" alt="Guitarra Líder" class="member-img">
-        <!-- Etiqueta <div>: Capa superior para efectos hover al pasar el cursor sobre la foto -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Icono de expansión visual FontAwesome 'fa-solid fa-expand' -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre del <div> 'member-overlay' -->
         </div>
-      <!-- Cierre del <div> 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Contenedor para el área de texto de la tarjeta -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Muestra el nombre asignado al guitarrista -->
         <h3>Tu Nombre</h3>
-        <!-- Etiqueta <p>: Muestra el instrumento asignado -->
         <p>Guitarra Líder</p>
 
          
 
-      <!-- Cierre del <div> 'member-info' -->
       </div>
-    <!-- Cierre del <div> 'member-card' (Integrante 3) -->
     </div>
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 2 (Bajo) -->
-    <!-- Etiqueta <div>: Tarjeta del bajista. Evento 'onclick': Llama a 'openMemberModal' con los parámetros específicos del bajista -->
     <div class="member-card" onclick="openMemberModal('img/Bajo.jpg', 'Nombre Artista 2', 'Bajo & Coros', 'https://facebook.com/usuario2', 'Base rítmica, líneas de bajo y coros.')">
-      <!-- Etiqueta <div>: Envoltorio para la foto del bajista -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Carga la foto 'img/integrante2.jpg' con texto alternativo y clase de estilizado -->
         <img src="img/Bajo.jpg" alt="Bajo & Coros" class="member-img">
-        <!-- Etiqueta <div>: Capa flotante interactiva -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Icono FontAwesome de expansión -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre del <div> 'member-overlay' -->
         </div>
-      <!-- Cierre del <div> 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Contenedor con la clase 'member-info' -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Nombre del bajista -->
         <h3>Nombre Artista 2</h3>
-        <!-- Etiqueta <p>: Instrumento / Rol (Bajo & Coros) -->
         <p>Bajo & Coros</p>
 
          
-      <!-- Cierre del <div> 'member-info' -->
       </div>
-    <!-- Cierre del <div> 'member-card' (Integrante 2) -->
     </div>
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 4 (Batería) -->
-    <!-- Etiqueta <div>: Tarjeta del baterista. Evento 'onclick': Pasa los datos del baterista al modal interactivamente -->
     <div class="member-card" onclick="openMemberModal('img/Bateria.jpg', 'Nombre Artista 4', 'Batería / Percusión', 'https://facebook.com/usuario4', 'El motor rítmico de la banda.')">
-      <!-- Etiqueta <div>: Envoltorio de foto con clase 'member-img-wrapper' -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Carga la imagen de la batería ('img/integrante4.jpg') con clase 'member-img' -->
         <img src="img/Bateria.jpg" alt="Batería / Percusión" class="member-img">
-        <!-- Etiqueta <div>: Capa superpuesta interactiva 'member-overlay' -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Icono 'fa-solid fa-expand' -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre del <div> 'member-overlay' -->
         </div>
-      <!-- Cierre del <div> 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Bloque informativo del baterista -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Nombre del artista 4 -->
         <h3>Nombre Artista 4</h3>
-        <!-- Etiqueta <p>: Especialidad rítmica (Batería / Percusión) -->
         <p>Batería / Percusión</p>
          
-      <!-- Cierre del <div> 'member-info' -->
       </div>
-    <!-- Cierre del <div> 'member-card' (Integrante 4) -->
     </div>
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 5 (Trompeta - Vientos) -->
-    <!-- Etiqueta <div>: Tarjeta de vientos. Evento 'onclick': Llama a 'openMemberModal' cargando la información de la trompeta -->
     <div class="member-card" onclick="openMemberModal('img/Trompeta.jpg', 'Nombre Artista 5', 'Trompeta / Vientos', 'https://facebook.com/usuario5', 'Arreglos de vientos y potencia en vivo.')">
-      <!-- Etiqueta <div>: Envoltorio 'member-img-wrapper' -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Muestra la foto 'img/integrante5.jpg' del integrante de vientos -->
         <img src="img/Trompeta.jpg" alt="Trompeta / Vientos" class="member-img">
-        <!-- Etiqueta <div>: Capa superpuesta visual 'member-overlay' -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Icono FontAwesome para indicar interactividad -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre del <div> 'member-overlay' -->
         </div>
-      <!-- Cierre del <div> 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Contenedor 'member-info' -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Nombre del artista 5 -->
         <h3>Nombre Artista 5</h3>
-        <!-- Etiqueta <p>: Rol desempeñado (Trompeta / Vientos) -->
         <p>Trompeta / Vientos</p>
          
-      <!-- Cierre del <div> 'member-info' -->
       </div>
-    <!-- Cierre del <div> 'member-card' (Integrante 5) -->
     </div>
 
-    <!-- Comentario HTML: Inicio de la tarjeta del Integrante 6 (Teclado) -->
-    <!-- Etiqueta <div>: Tarjeta del tecladista. Evento 'onclick': Invoca 'openMemberModal' con los detalles del tecladista -->
     <div class="member-card" onclick="openMemberModal('img/Teclado.jpg', 'Nombre Artista 6', 'Teclado', 'https://facebook.com/usuario6', 'Armonías y sintetizadores.')">
-      <!-- Etiqueta <div>: Envoltorio de imagen 'member-img-wrapper' -->
       <div class="member-img-wrapper">
-        <!-- Etiqueta <img>: Muestra la foto 'img/integrante6.jpg' del tecladista -->
         <img src="img/Teclado.jpg" alt="Teclado" class="member-img">
-        <!-- Etiqueta <div>: Capa de superposición para efecto hover -->
         <div class="member-overlay">
-          <!-- Etiqueta <i>: Icono de ampliación FontAwesome -->
           <i class="fa-solid fa-expand expand-icon"></i>
-        <!-- Cierre del <div> 'member-overlay' -->
         </div>
-      <!-- Cierre del <div> 'member-img-wrapper' -->
       </div>
-      <!-- Etiqueta <div>: Bloque 'member-info' para nombres y roles -->
       <div class="member-info">
-        <!-- Etiqueta <h3>: Nombre del artista 6 -->
         <h3>Nombre Artista 6</h3>
-        <!-- Etiqueta <p>: Instrumento (Teclado) -->
         <p>Teclado</p>
          
-      <!-- Cierre del <div> 'member-info' -->
       </div>
-    <!-- Cierre del <div> 'member-card' (Integrante 6) -->
     </div>
 
-  <!-- Comentario HTML: Cierre del contenedor principal Grid. Garantiza que las 6 tarjetas queden dentro de la cuadrícula -->
-  <!-- Cierre del <div> con la clase 'members-grid' -->
   </div> 
 
-<!-- Comentario HTML: Cierre definitivo de la sección completa de integrantes de la banda -->
-<!-- Cierre de la etiqueta <section> -->
 </section>
 
-<!-- VENTANA MODAL (Cuadro flotante centrado para ver detalle del integrante) -->
 <dialog id="memberModal" class="member-modal">
   <div class="modal-content">
     <!-- Botón para cerrar el cuadro flotante (X) -->
     <button class="close-modal-btn" onclick="closeMemberModal()">&times;</button>
     
-    <!-- Imagen ampliada dentro del modal -->
     <img id="modalImg" src="" alt="Foto Integrante" class="modal-img">
     
-    <!-- Información ampliada del integrante -->
     <div class="modal-body">
       <h3 id="modalName">Nombre del Artista</h3>
       <p id="modalRole">Rol / Instrumento</p>
 
-      <!-- DESCRIPCIÓN Y RESEÑA DEL ARTISTA -->
       <p id="modalBio" class="modal-bio">Descripción del integrante...</p>
       
-      <!-- Botón de Facebook que redirige a la página del artista -->
+      
       <a id="modalFbBtn" href="#" target="_blank" rel="noopener" class="modal-fb-btn">
         <i class="fa-brands fa-facebook"></i> Visitar Facebook
       </a>
@@ -272,35 +175,34 @@
   </div>
 </dialog>
 
-<!-- SCRIPT JS: Controla la apertura y cierre del modal dinámico -->
+
 <script>
-  // Función para abrir el modal cargando la información específica del integrante
+  
   function openMemberModal(imageSrc, name, role, facebookUrl, bioText) {
   const modal = document.getElementById('memberModal');
     
-    // Inyecta los datos recibidos dentro de los elementos del modal
+  
     document.getElementById('modalImg').src = imageSrc;
   document.getElementById('modalName').innerText = name;
   document.getElementById('modalRole').innerText = role;
   document.getElementById('modalFbBtn').href = facebookUrl;
 
-    // Inyecta la descripción del integrante
+   
   const modalBio = document.getElementById('modalBio');
   if (modalBio) {
     modalBio.innerText = bioText || "";
   }
     
-    // Muestra la ventana flotante en modo modal centrado
+    
     modal.showModal();
   }
 
-  // Función para cerrar el cuadro emergente
+  
   function closeMemberModal() {
     const modal = document.getElementById('memberModal');
     modal.close();
   }
 
-  // Permite cerrar el modal haciendo clic fuera del recuadro flotante
   document.getElementById('memberModal').addEventListener('click', function(event) {
     if (event.target === this) {
       closeMemberModal();
@@ -355,14 +257,9 @@
         <!--<a href="https://www.youtube.com/watch?v=C07meEtjAQg" class="social-card social-youtube" target="_blank" rel="noopener">
           <i class="fa-brands fa-youtube"></i>
           <span>YouTube</span>
-        </a>
+        </a>-->
 
         
-
-        <a href="https://t.me" class="social-card social-telegram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-telegram"></i>
-          <span>Telegram</span>
-        </a>-->
       </div>
     </section>
 
