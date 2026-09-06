@@ -221,8 +221,7 @@
       <div class="carousel-container">
         <div class="carousel-slide" id="slider">
           
-          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Concierto / Evento 1">
-          <img src="img/Reaktor.png">
+          <img src="img/f1.jpg">
           <img src="img/f2.jpg">
           <img src="img/f3.jpg">
           <img src="img/f4.jpg">
@@ -266,6 +265,42 @@
 
 
     
+
+
+    <section class="card" style="text-align: center;">
+  
+  <h2 class="section-title"><i class="fa-solid fa-id-card"></i> Tarjeta Digital Reaktor</h2>
+  
+  <p style="margin-bottom: 15px;">Guarda nuestros datos directamente en tu agenda o descarga nuestra tarjeta con código QR:</p>
+
+  <button onclick="procesarContactoYTarjeta()" class="modal-fb-btn" style="background: #d97706; border: none; cursor: pointer; font-size: 1rem; padding: 12px 25px;">
+    <i class="fa-solid fa-address-card"></i> Guardar Contacto & Tarjeta
+  </button>
+</section>
+
+<dialog id="downloadModal" class="member-modal">
+  
+  <div class="modal-content" style="text-align: center; padding: 20px;">
+    
+    <button class="close-modal-btn" onclick="closeDownloadModal()">&times;</button>
+    
+    <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: #10b981; margin-bottom: 10px;"></i>
+    
+    <h3>¡Contacto listo!</h3>
+    
+    <p style="margin: 10px 0; font-size: 0.9rem; color: #ccc;">Revisa la descarga del archivo de contacto (.vcf) para guardarlo en tu agenda.</p>
+    
+    <div style="margin: 15px 0;">
+      <img src="img/tarjeta-reaktor.png" alt="Tarjeta Reaktor con QR" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+    </div>
+
+    <a href="img/tarjeta-reaktor.png" download="Tarjeta_Reaktor_QR.png" class="modal-fb-btn" style="background: #374151; text-decoration: none; display: inline-block; margin-top: 5px;">
+      <i class="fa-solid fa-download"></i> Descargar Imagen de la Tarjeta
+    </a>
+  </div>
+</dialog>
+
+
 
 
 
@@ -331,6 +366,60 @@
     window.addEventListener('resize', updateCarousel);
   </script>
 
+
+
+
+
+
+<script>
+function procesarContactoYTarjeta() {
+  
+  const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if (esMovil) {
+    
+    const vcardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Reaktor Rock Latino
+ORG:Reaktor
+TEL;TYPE=CELL:+59176482003
+URL:https://tu-usuario.github.io/tu-repo/
+END:VCARD`;
+
+    const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Reaktor_Contacto.vcf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } else {
+    
+    const a = document.createElement('a');
+    a.href = 'img/tarjeta-reaktor.png';
+    a.download = 'Tarjeta_Reaktor_QR.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+    setTimeout(() => {
+    document.getElementById('downloadModal').showModal();
+  }, 500);
+}
+
+function closeDownloadModal() {
+  document.getElementById('downloadModal').close();
+}
+
+document.getElementById('downloadModal').addEventListener('click', function(event) {
+  if (event.target === this) {
+    closeDownloadModal();
+  }
+});
+</script>
 
 
 
