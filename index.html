@@ -5,241 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reaktor - Sitio Oficial</title>
 
- 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
- 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
- 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-
+  <!-- Fondo animado -->
   <div class="smoke-background">
     <div class="light-spot spot-1"></div>
     <div class="light-spot spot-2"></div>
     <div class="light-spot spot-3"></div>
   </div>
 
-  
+  <!-- Encabezado / Hero -->
   <header class="hero">
-    <div class="hero-overlay"></div>
-    
-    
     <div class="logo-container">
-      
       <img src="img/Reaktor.png" alt="Reaktor-IR Logo" class="brand-logo" onerror="this.src='https://via.placeholder.com/180/111827/d97706?text=REAKTOR+IR'">
     </div>
-
     <p><span class="hero-tag"><i class="fa-solid fa-guitar"></i> Comunidad & Proyectos</span></p>
     <p class="hero-description">Bienvenido a nuestra plataforma oficial. Espacio dedicado a compartir nuestros proyectos, información actualizada y redes de contacto.</p>
   </header>
 
-  
+  <!-- Contenido principal -->
   <main class="container">
 
-    
-<section class="card">
-  <h2 class="section-title"><i class="fa-solid fa-bolt"></i> Sobre Nuestro Grupo</h2>
-  <p class="about-text">
-    Somos una banda apasionada por la energía y la fuerza del <strong>Rock Latino</strong>. Nos especializamos en revivir los grandes e inolvidables éxitos, transformando cada presentación en una verdadera fiesta llena de ritmo, distorsión y nostalgia.
-  </p>
-  <p class="about-text" style="margin-top: 15px;">
-    Llevamos la mejor vibra para amenizar todo tipo de eventos y celebraciones privadas. Nuestro objetivo es conectar con el público, hacer cantar a todos a todo pulmón y garantizar una noche épica a puro rock.
-  </p>
+    <!-- Sobre Nosotros -->
+    <section class="card">
+      <h2 class="section-title"><i class="fa-solid fa-bolt"></i> Sobre Nuestro Grupo</h2>
+      <p class="about-text">
+        Somos una banda apasionada por la energía y la fuerza del <strong>Rock Latino</strong>. Nos especializamos en revivir los grandes e inolvidables éxitos, transformando cada presentación en una verdadera fiesta llena de ritmo, distorsión y nostalgia.
+      </p>
+      <p class="about-text" style="margin-top: 15px;">
+        Llevamos la mejor vibra para amenizar todo tipo de eventos y celebraciones privadas. Nuestro objetivo es conectar con el público, hacer cantar a todos a todo pulmón y garantizar una noche épica a puro rock.
+      </p>
+    </section>
 
-  </section>
-
-<section class="card members-section">
-  <h2 class="section-title">
-    <i class="fa-solid fa-users-line"></i> Integrantes
-  </h2>
-  
-  <div class="members-grid">
-
-    <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Rosby Nava', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
-      <div class="member-img-wrapper">
-        <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Rosby Nava</h3>
-        <p>Voz Principal</p>
-
-        
-    
-      </div>
-    </div>
-
-    <div class="member-card" onclick="openMemberModal('img/G_lider.jpg', 'Ivan Rodriguez', 'Guitarra Líder', 'https://www.facebook.com/share/19NYEAc8kU/', ' Encargado de los riffs, armonías y solos icónicos que le dan la fuerza y el espíritu al sonido de Reaktor. ¡Visita mi página para ver más sobre mi, econtrarás videos de mis solos y grupos donde he estado antes, proyectos personales y más!')">
-      <div class="member-img-wrapper">
-        <img src="img/G_lider.jpg" alt="Guitarra Líder" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Ivan Rodriguez</h3>
-        <p>Guitarra Líder</p>
-
-         
-
-      </div>
-    </div>
-
-    <div class="member-card" onclick="openMemberModal('img/Bajo.jpg', 'Milko Terrazas', 'Director, Bajo & Coros', 'https://www.facebook.com/share/1FRTXJKQmH/', 'Base rítmica, líneas de bajo y coros.')">
-      <div class="member-img-wrapper">
-        <img src="img/Bajo.jpg" alt="Bajo & Coros" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Milko Terrazas</h3>
-         <p>Director</p>
-        <p>Bajo & Coros</p>
-
-         
-      </div>
-    </div>
-
-    <div class="member-card" onclick="openMemberModal('img/Bateria.jpg', 'Gilmar Maldonado', 'Batería / Percusión', 'https://www.facebook.com/share/1FRTXJKQmH/')">
-      <div class="member-img-wrapper">
-        <img src="img/Bateria.jpg" alt="Batería / Percusión" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Gilmar Maldonado</h3>
-        <p>Batería / Percusión</p>
-         
-      </div>
-    </div>
-
-    <div class="member-card" onclick="openMemberModal('img/Trompeta.jpg', 'Carlos Aruquipa', 'Trompeta / Coros', 'https://facebook.com/usuario5', 'Arreglos de vientos y potencia en vivo.')">
-      <div class="member-img-wrapper">
-        <img src="img/Trompeta.jpg" alt="Trompeta / Coros" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Carlos Aruquipa</h3>
-        <p>Trompeta / Vientos</p>
-         
-      </div>
-    </div>
-
-    <div class="member-card" onclick="openMemberModal('img/Teclado.jpg', 'Geroge Hauregui', 'Teclado', 'https://www.facebook.com/share/1Dggb5VUMB/', 'Armonías y sintetizadores.')">
-      <div class="member-img-wrapper">
-        <img src="img/Teclado.jpg" alt="Teclado" class="member-img">
-        <div class="member-overlay">
-          <i class="fa-solid fa-expand expand-icon"></i>
-        </div>
-      </div>
-      <div class="member-info">
-        <h3>Geroge Hauregui</h3>
-        <p>Teclado</p>
-         
-      </div>
-    </div>
-
-  </div> 
-
-</section>
-
-<dialog id="memberModal" class="member-modal">
-  <div class="modal-content">
-    <!-- Botón para cerrar el cuadro flotante (X) -->
-    <button class="close-modal-btn" onclick="closeMemberModal()">&times;</button>
-    
-    <img id="modalImg" src="" alt="Foto Integrante" class="modal-img">
-    
-    <div class="modal-body">
-      <h3 id="modalName">Nombre del Artista</h3>
-      <p id="modalRole">Rol / Instrumento</p>
-
-      <p id="modalBio" class="modal-bio">Descripción del integrante...</p>
+    <!-- Integrantes -->
+    <section class="card members-section">
+      <h2 class="section-title"><i class="fa-solid fa-users-line"></i> Integrantes</h2>
       
-      
-      <a id="modalFbBtn" href="#" target="_blank" rel="noopener" class="modal-fb-btn">
-        <i class="fa-brands fa-facebook"></i> Visitar Facebook
-      </a>
-    </div>
-  </div>
-</dialog>
+      <div class="members-grid">
+        <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Rosby Nava', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
+          <div class="member-img-wrapper">
+            <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Rosby Nava</h3>
+            <p>Voz Principal</p>
+          </div>
+        </div>
 
+        <div class="member-card" onclick="openMemberModal('img/G_lider.jpg', 'Ivan Rodriguez', 'Guitarra Líder', 'https://www.facebook.com/share/19NYEAc8kU/', 'Encargado de los riffs, armonías y solos icónicos que le dan la fuerza y el espíritu al sonido de Reaktor.')">
+          <div class="member-img-wrapper">
+            <img src="img/G_lider.jpg" alt="Guitarra Líder" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Ivan Rodriguez</h3>
+            <p>Guitarra Líder</p>
+          </div>
+        </div>
 
-<script>
-  
-  function openMemberModal(imageSrc, name, role, facebookUrl, bioText) {
-  const modal = document.getElementById('memberModal');
-    
-  
-  document.getElementById('modalImg').src = imageSrc;
-  document.getElementById('modalName').innerText = name;
-  document.getElementById('modalRole').innerText = role;
-  document.getElementById('modalFbBtn').href = facebookUrl;
+        <div class="member-card" onclick="openMemberModal('img/Bajo.jpg', 'Milko Terrazas', 'Director, Bajo & Coros', 'https://www.facebook.com/share/1FRTXJKQmH/', 'Base rítmica, líneas de bajo y coros.')">
+          <div class="member-img-wrapper">
+            <img src="img/Bajo.jpg" alt="Bajo & Coros" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Milko Terrazas</h3>
+            <p>Director</p>
+            <p>Bajo & Coros</p>
+          </div>
+        </div>
 
-   
-  const modalBio = document.getElementById('modalBio');
-  if (modalBio) {
-    modalBio.innerText = bioText || "";
-  }
-    
-    
-    modal.showModal();
-  }
+        <div class="member-card" onclick="openMemberModal('img/Bateria.jpg', 'Gilmar Maldonado', 'Batería / Percusión', 'https://www.facebook.com/share/1FRTXJKQmH/', '')">
+          <div class="member-img-wrapper">
+            <img src="img/Bateria.jpg" alt="Batería / Percusión" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Gilmar Maldonado</h3>
+            <p>Batería / Percusión</p>
+          </div>
+        </div>
 
-  
-  function closeMemberModal() {
-    const modal = document.getElementById('memberModal');
-    modal.close();
-  }
+        <div class="member-card" onclick="openMemberModal('img/Trompeta.jpg', 'Carlos Aruquipa', 'Trompeta / Coros', 'https://facebook.com/usuario5', 'Arreglos de vientos y potencia en vivo.')">
+          <div class="member-img-wrapper">
+            <img src="img/Trompeta.jpg" alt="Trompeta / Coros" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Carlos Aruquipa</h3>
+            <p>Trompeta / Vientos</p>
+          </div>
+        </div>
 
-  document.getElementById('memberModal').addEventListener('click', function(event) {
-    if (event.target === this) {
-      closeMemberModal();
-    }
-  });
-</script>
+        <div class="member-card" onclick="openMemberModal('img/Teclado.jpg', 'Geroge Hauregui', 'Teclado', 'https://www.facebook.com/share/1Dggb5VUMB/', 'Armonías y sintetizadores.')">
+          <div class="member-img-wrapper">
+            <img src="img/Teclado.jpg" alt="Teclado" class="member-img">
+            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
+          </div>
+          <div class="member-info">
+            <h3>Geroge Hauregui</h3>
+            <p>Teclado</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Modal Integrante -->
+    <dialog id="memberModal" class="member-modal">
+      <div class="modal-content">
+        <button class="close-modal-btn" onclick="closeMemberModal()">&times;</button>
+        <img id="modalImg" src="" alt="Foto Integrante" class="modal-img">
+        <div class="modal-body">
+          <h3 id="modalName">Nombre del Artista</h3>
+          <p id="modalRole">Rol / Instrumento</p>
+          <p id="modalBio" class="modal-bio">Descripción del integrante...</p>
+          <a id="modalFbBtn" href="#" target="_blank" rel="noopener" class="modal-fb-btn">
+            <i class="fa-brands fa-facebook"></i> Visitar Facebook
+          </a>
+        </div>
+      </div>
+    </dialog>
 
-
-
-
-    
+    <!-- Galería / Carrusel -->
     <section class="card">
       <h2 class="section-title"><i class="fa-solid fa-record-vinyl"></i> Galería de Actividades</h2>
       <div class="carousel-container">
         <div class="carousel-slide" id="slider">
-          
-          <img src="img/f1.jpg">
-          <img src="img/f2.jpg">
-          <img src="img/f3.jpg">
-          <img src="img/f4.jpg">
-          <img src="img/f5.jpg">
+          <img src="img/f1.jpg" alt="Galería 1">
+          <img src="img/f2.jpg" alt="Galería 2">
+          <img src="img/f3.jpg" alt="Galería 3">
+          <img src="img/f4.jpg" alt="Galería 4">
+          <img src="img/f5.jpg" alt="Galería 5">
         </div>
-        
         <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
     </section>
 
-    
+    <!-- Redes Sociales -->
     <section class="card">
       <h2 class="section-title"><i class="fa-solid fa-hashtag"></i> Conéctate con Nosotros</h2>
       <p>Síguenos en nuestras plataformas oficiales para ver nuestros <b>Videos</b>, <b>presentaciones</b> y estar al día con las últimas novedades:</p>
 
       <div class="social-grid">
-        
         <a href="https://www.facebook.com/share/1Gj37fr3C5/" class="social-card social-facebook" target="_blank" rel="noopener">
           <i class="fa-brands fa-facebook"></i>
           <span>Facebook</span>
@@ -249,180 +164,139 @@
           <i class="fa-brands fa-instagram"></i>
           <span>Instagram</span>
         </a>
+
         <a href="https://www.tiktok.com/@reaktor_bolivia?_r=1&_t=ZS-99EfEnIVS6e" class="social-card social-tiktok" target="_blank" rel="noopener">
           <i class="fa-brands fa-tiktok"></i>
           <span>TikTok</span>
         </a>
-
-        <!--<a href="https://www.youtube.com/watch?v=C07meEtjAQg" class="social-card social-youtube" target="_blank" rel="noopener">
-          <i class="fa-brands fa-youtube"></i>
-          <span>YouTube</span>
-        </a>-->
-
-        
       </div>
     </section>
 
-
-    
-
-
+    <!-- Tarjeta Digital -->
     <section class="card" style="text-align: center;">
-  
-  <h2 class="section-title"><i class="fa-solid fa-id-card"></i> Tarjeta Digital Reaktor</h2>
-  
-  <p style="margin-bottom: 15px;">Guarda nuestros datos directamente en tu agenda o descarga nuestra tarjeta con <b>código QR:</b> para compartir con tus amigos.</p>
+      <h2 class="section-title"><i class="fa-solid fa-id-card"></i> Tarjeta Digital Reaktor</h2>
+      <p style="margin-bottom: 15px;">Guarda nuestros datos directamente en tu agenda o descarga nuestra tarjeta con <b>código QR</b> para compartir con tus amigos.</p>
+      <button onclick="procesarContactoYTarjeta()" class="modal-fb-btn" style="background: #d97706; border: none; cursor: pointer; font-size: 1rem; padding: 12px 25px;">
+        <i class="fa-solid fa-address-card"></i> Guardar Contacto & Tarjeta
+      </button>
+    </section>
 
-  <button onclick="procesarContactoYTarjeta()" class="modal-fb-btn" style="background: #d97706; border: none; cursor: pointer; font-size: 1rem; padding: 12px 25px;">
-    <i class="fa-solid fa-address-card"></i> Guardar Contacto & Tarjeta
-  </button>
-</section>
-
-<dialog id="downloadModal" class="member-modal">
-  
-  <div class="modal-content" style="text-align: center; padding: 20px;">
-    
-    <button class="close-modal-btn" onclick="closeDownloadModal()">&times;</button>
-    
-    <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: #10b981; margin-bottom: 10px;"></i>
-    
-    <h3>¡Contacto listo!</h3>
-    
-    <p style="margin: 10px 0; font-size: 0.9rem; color: #ccc;">Revisa la descarga del archivo de contacto (.vcf) para guardarlo en tu agenda.</p>
-    
-    <div style="margin: 15px 0;">
-      <img src="img/Tarjeta3.jpg" alt="Tarjeta Reaktor con QR" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
-    </div>
-
-    <a href="img/Tarjeta3.jpg" download="Tarjeta3.jpg" class="modal-fb-btn" style="background: #374151; text-decoration: none; display: inline-block; margin-top: 5px;">
-      <i class="fa-solid fa-download"></i> Descargar Imagen de la Tarjeta
-    </a>
-  </div>
-</dialog>
-
-
-
-
-
+    <!-- Modal Descarga -->
+    <dialog id="downloadModal" class="member-modal">
+      <div class="modal-content" style="text-align: center; padding: 20px;">
+        <button class="close-modal-btn" onclick="closeDownloadModal()">&times;</button>
+        <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: #10b981; margin-bottom: 10px;"></i>
+        <h3>¡Contacto listo!</h3>
+        <p style="margin: 10px 0; font-size: 0.9rem; color: #ccc;">Revisa la descarga del archivo de contacto (.vcf) para guardarlo en tu agenda.</p>
+        <div style="margin: 15px 0;">
+          <img src="img/Tarjeta3.jpg" alt="Tarjeta Reaktor con QR" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+        </div>
+        <a href="img/Tarjeta3.jpg" download="Tarjeta3.jpg" class="modal-fb-btn" style="background: #374151; text-decoration: none; display: inline-block; margin-top: 5px;">
+          <i class="fa-solid fa-download"></i> Descargar Imagen de la Tarjeta
+        </a>
+      </div>
+    </dialog>
 
   </main>
 
-  
- <a href="https://wa.me/59176482003?text=Hola%20Reaktor,%20necesito%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener">
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/59176482003?text=Hola%20Reaktor,%20necesito%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener">
     <i class="fa-brands fa-whatsapp"></i>
     <span>Contactar por WhatsApp</span>
-</a>
+  </a>
 
-  
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 REAKTOR. Todos los derechos reservados.</p>
   </footer>
 
-  
-    
-  
-  
-  
+  <!-- Scripts JS -->
   <script>
+    // Lógica Modal Integrantes
+    function openMemberModal(imageSrc, name, role, facebookUrl, bioText) {
+      const modal = document.getElementById('memberModal');
+      document.getElementById('modalImg').src = imageSrc;
+      document.getElementById('modalName').innerText = name;
+      document.getElementById('modalRole').innerText = role;
+      document.getElementById('modalFbBtn').href = facebookUrl;
+
+      const modalBio = document.getElementById('modalBio');
+      if (modalBio) {
+        modalBio.innerText = bioText || "";
+      }
+      modal.showModal();
+    }
+
+    function closeMemberModal() {
+      document.getElementById('memberModal').close();
+    }
+
+    document.getElementById('memberModal').addEventListener('click', function(event) {
+      if (event.target === this) closeMemberModal();
+    });
+
+    // Lógica Carrusel
     const slider = document.getElementById('slider');
     const images = slider.querySelectorAll('img');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-
     let counter = 0;
 
-    
     function updateCarousel() {
       const size = images[0].clientWidth;
       slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
 
-    
     nextBtn.addEventListener('click', () => {
-      if (counter >= images.length - 1) {
-        counter = 0;
-      } else {
-        counter++;
-      }
+      counter = (counter >= images.length - 1) ? 0 : counter + 1;
       updateCarousel();
     });
 
-    
     prevBtn.addEventListener('click', () => {
-      if (counter <= 0) {
-        counter = images.length - 1;
-      } else {
-        counter--;
-      }
+      counter = (counter <= 0) ? images.length - 1 : counter - 1;
       updateCarousel();
     });
 
-    
-    setInterval(() => {
-      nextBtn.click();
-    }, 5000);
-
-    
+    setInterval(() => { nextBtn.click(); }, 5000);
     window.addEventListener('resize', updateCarousel);
+
+    // Lógica Descarga Contacto / Tarjeta
+    function procesarContactoYTarjeta() {
+      const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      if (esMovil) {
+        const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Reaktor Rock Latino\nORG:Reaktor\nTEL;TYPE=CELL:+59176482003\nURL:https://tu-usuario.github.io/tu-repo/\nEND:VCARD`;
+        const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Reaktor_Contacto.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } else {
+        const a = document.createElement('a');
+        a.href = 'img/Tarjeta3.jpg';
+        a.download = 'Tarjeta_Reaktor_QR.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+
+      setTimeout(() => {
+        document.getElementById('downloadModal').showModal();
+      }, 500);
+    }
+
+    function closeDownloadModal() {
+      document.getElementById('downloadModal').close();
+    }
+
+    document.getElementById('downloadModal').addEventListener('click', function(event) {
+      if (event.target === this) closeDownloadModal();
+    });
   </script>
-
-
-
-
-
-
-<script>
-function procesarContactoYTarjeta() {
-  
-  const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-  if (esMovil) {
-    
-    const vcardData = `BEGIN:VCARD
-VERSION:3.0
-FN:Reaktor Rock Latino
-ORG:Reaktor
-TEL;TYPE=CELL:+59176482003
-URL:https://tu-usuario.github.io/tu-repo/
-END:VCARD`;
-
-    const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Reaktor_Contacto.vcf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  } else {
-    
-    const a = document.createElement('a');
-    a.href = 'img/Tarjeta3.jpg';
-    a.download = 'Tarjeta_Reaktor_QR.png';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
-
-    setTimeout(() => {
-    document.getElementById('downloadModal').showModal();
-  }, 500);
-}
-
-function closeDownloadModal() {
-  document.getElementById('downloadModal').close();
-}
-
-document.getElementById('downloadModal').addEventListener('click', function(event) {
-  if (event.target === this) {
-    closeDownloadModal();
-  }
-});
-</script>
-
-
 
 </body>
 </html>
-
