@@ -529,41 +529,61 @@ footer {
   }
 }
 
+
+
 /* ==========================================
-   AJUSTES UX / MÓVIL PARA INTEGRANTES
+   NUEVA ANIMACIÓN DE PULSO PARA MÓVILES (UX)
    ========================================== */
 
 /* 1. Mensaje explicativo debajo del título */
 .instruccion-ux {
   font-size: 0.9rem;
-  color: #a0a0a0; /* Puedes ajustar este tono de gris al color de tu sitio */
+  color: #a0a0a0;
   text-align: center;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
   padding: 0 10px;
 }
 
-/* 2. Estilo para el botón/etiqueta dentro de la foto */
-.badge-ver-mas {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #ffffff;
-  padding: 8px 14px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* 3. Asegurar visibilidad en móviles (Dispositivos táctiles) */
-@media (max-width: 768px) {
-  /* Hace que el overlay sea sutilmente visible por defecto en celulares */
-  .member-overlay {
-    opacity: 1 !important;
-    background: rgba(0, 0, 0, 0.25) !important;
+/* 2. Definición de la animación de pulso (disminuir -> crecer -> normal) */
+@keyframes pulsoIndicador {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.8;
   }
 }
 
+/* 3. Reglas exclusivas para Dispositivos Móviles (pantallas <= 768px) */
+@media (max-width: 768px) {
+
+  /* Overlay visible de forma sutil en móviles */
+  .member-overlay {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Animación aplicada al recuadro / ícono en el centro de la foto */
+  .member-overlay .expand-icon,
+  .member-overlay i {
+    font-size: 1rem;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    border-radius: 50%; /* Puedes usar 8px si prefieres recuadro cuadrado en vez de círculo */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    /* Animación continua de 2 segundos */
+    animation: pulsoIndicador 2s infinite ease-in-out;
+  }
+}
