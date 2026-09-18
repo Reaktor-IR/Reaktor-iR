@@ -46,18 +46,29 @@
     <!-- Integrantes -->
     <section class="card members-section">
       <h2 class="section-title"><i class="fa-solid fa-users-line"></i> Integrantes</h2>
+
+      <p class="instruccion-ux">Toca o pasa el cursor sobre la foto de cualquier integrante para conocer más sobre su trayectoria y redes sociales.</p>
+  
+  <div class="grid-integrantes">
+    ...
       
       <div class="members-grid">
-        <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Rosby Nava', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
-          <div class="member-img-wrapper">
-            <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
-            <div class="member-overlay"><i class="fa-solid fa-expand expand-icon"></i></div>
-          </div>
-          <div class="member-info">
-            <h3>Rosby Nava</h3>
-            <p>Voz Principal</p>
-          </div>
-        </div>
+  
+  <div class="member-card" onclick="openMemberModal('img/Voz.jpg', 'Rosby Nava', 'Voz Principal', 'https://facebook.com/usuario1', 'Voz principal y líder de escenario.')">
+    <div class="member-img-wrapper">
+      <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
+      
+      
+      <div class="member-overlay">
+        <span class="badge-ver-mas">Ver perfil <i class="fa-solid fa-expand expand-icon"></i></span>
+      </div>
+      
+    </div>
+    <div class="member-info">
+      <h3>Rosby Nava</h3>
+      <p>Voz Principal</p>
+    </div>
+  </div>
 
         <div class="member-card" onclick="openMemberModal('img/G_lider.jpg', 'Ivan Rodriguez', 'Guitarra Líder', 'https://www.facebook.com/share/19NYEAc8kU/', 'Encargado de los riffs, armonías y solos icónicos que le dan la fuerza y el espíritu al sonido de Reaktor.')">
           <div class="member-img-wrapper">
