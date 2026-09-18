@@ -13,14 +13,14 @@
 </head>
 <body>
 
-  <!-- Fondo animado -->
+ 
   <div class="smoke-background">
     <div class="light-spot spot-1"></div>
     <div class="light-spot spot-2"></div>
     <div class="light-spot spot-3"></div>
   </div>
 
-  <!-- Encabezado / Hero -->
+ 
   <header class="hero">
     <div class="logo-container">
       <img src="img/Reaktor.png" alt="Reaktor-IR Logo" class="brand-logo" onerror="this.src='https://via.placeholder.com/180/111827/d97706?text=REAKTOR+IR'">
@@ -29,7 +29,7 @@
     <p class="hero-description">Bienvenido a nuestra plataforma oficial. Espacio dedicado a compartir nuestros proyectos, información actualizada y redes de contacto.</p>
   </header>
 
-  <!-- Contenido principal -->
+ 
   <main class="container">
 
     <!-- Sobre Nosotros -->
@@ -43,7 +43,7 @@
       </p>
     </section>
 
-  <!-- Integrantes -->
+
 <section class="card members-section">
   <h2 class="section-title"><i class="fa-solid fa-users-line"></i> Integrantes</h2>
 
@@ -55,8 +55,7 @@
       <div class="member-img-wrapper">
         <img src="img/Voz.jpg" alt="Voz Principal" class="member-img">
         
-        <!-- ⬇️ RECUADRO / ÍCONO LIMPIO SIN EL TEXTO "VER PERFIL" ⬇️ -->
-        <div class="member-overlay">
+       <div class="member-overlay">
           <i class="fa-solid fa-expand expand-icon"></i>
         </div>
         
@@ -125,7 +124,7 @@
       </div>
     </section>
 
-    <!-- Modal Integrante -->
+   
     <dialog id="memberModal" class="member-modal">
       <div class="modal-content">
         <button class="close-modal-btn" onclick="closeMemberModal()">&times;</button>
@@ -141,7 +140,7 @@
       </div>
     </dialog>
 
-    <!-- Galería / Carrusel -->
+  
     <section class="card">
       <h2 class="section-title"><i class="fa-solid fa-record-vinyl"></i> Galería de Actividades</h2>
       <div class="carousel-container">
@@ -157,7 +156,7 @@
       </div>
     </section>
 
-    <!-- Redes Sociales -->
+   
     <section class="card">
       <h2 class="section-title"><i class="fa-solid fa-hashtag"></i> Conéctate con Nosotros</h2>
       <p>Síguenos en nuestras plataformas oficiales para ver nuestros <b>Videos</b>, <b>presentaciones</b> y estar al día con las últimas novedades:</p>
@@ -180,7 +179,7 @@
       </div>
     </section>
 
-    <!-- Tarjeta Digital -->
+ 
     <section class="card" style="text-align: center;">
       <h2 class="section-title"><i class="fa-solid fa-id-card"></i> Tarjeta Digital Reaktor</h2>
       <p style="margin-bottom: 15px;">Guarda nuestros datos directamente en tu agenda o descarga nuestra tarjeta con <b>código QR</b> para compartir con tus amigos.</p>
@@ -189,7 +188,7 @@
       </button>
     </section>
 
-    <!-- Modal Descarga -->
+  
     <dialog id="downloadModal" class="member-modal">
       <div class="modal-content" style="text-align: center; padding: 20px;">
         <button class="close-modal-btn" onclick="closeDownloadModal()">&times;</button>
@@ -207,7 +206,7 @@
 
   </main>
 
-  <!-- Botón de WhatsApp -->
+ 
   <a href="https://wa.me/59176482003?text=Hola%20Reaktor,%20necesito%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener">
     <i class="fa-brands fa-whatsapp"></i>
     <span>Contactar por WhatsApp</span>
@@ -218,9 +217,9 @@
     <p>&copy; 2026 REAKTOR. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Scripts JS -->
+
   <script>
-    // Lógica Modal Integrantes
+   
     function openMemberModal(imageSrc, name, role, facebookUrl, bioText) {
       const modal = document.getElementById('memberModal');
       document.getElementById('modalImg').src = imageSrc;
@@ -243,7 +242,6 @@
       if (event.target === this) closeMemberModal();
     });
 
-    // Lógica Carrusel
     const slider = document.getElementById('slider');
     const images = slider.querySelectorAll('img');
     const prevBtn = document.getElementById('prevBtn');
@@ -268,8 +266,7 @@
     setInterval(() => { nextBtn.click(); }, 5000);
     window.addEventListener('resize', updateCarousel);
 
-    // Lógica Descarga Contacto / Tarjeta
-    function procesarContactoYTarjeta() {
+   function procesarContactoYTarjeta() {
       const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
       if (esMovil) {
