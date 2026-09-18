@@ -532,39 +532,39 @@ footer {
 
 
 /* ==========================================
-   ANIMACIÓN PARA MÓVILES (FOTOS BRILLANTES Y OVERLAY COMPACTO)
+   ANIMACIÓN MÓVIL SÚPER COMPACTA Y DISCRETA (UX)
    ========================================== */
 
 /* 1. Mensaje explicativo debajo del título */
 .instruccion-ux {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #a0a0a0;
   text-align: center;
   margin-top: -0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   padding: 0 10px;
 }
 
-/* 2. Definición de la animación de pulso */
+/* 2. Animación de latido MINIMALISTA (Cambios de escala de solo 12%) */
 @keyframes pulsoIndicador {
   0% {
-    transform: scale(0.85);
-    opacity: 0.8;
+    transform: scale(0.9);
+    opacity: 0.7;
   }
   50% {
-    transform: scale(1.05); /* Crece solo un poquito */
-    opacity: 1;
+    transform: scale(1.02); /* Latido apenas perceptible */
+    opacity: 0.95;
   }
   100% {
-    transform: scale(0.85);
-    opacity: 0.8;
+    transform: scale(0.9);
+    opacity: 0.7;
   }
 }
 
 /* 3. Reglas para Móviles (<= 768px) */
 @media (max-width: 768px) {
 
-  /* Overlay transparente para no tapar la luz de la foto */
+  /* Overlay transparente sin oscurecer la foto */
   .member-overlay {
     opacity: 1 !important;
     background: transparent !important;
@@ -573,18 +573,18 @@ footer {
     justify-content: center;
   }
 
-  /* ⬇️ RECUADRO MÁS PEQUEÑO Y DISCRETO ⬇️ */
+  /* ⬇️ RECUADRO Y ÍCONO MICRO-COMPACTOS ⬇️ */
   .member-overlay .expand-icon,
   .member-overlay i {
-    font-size: 0.75rem; /* Ícono más pequeño (antes era 0.9rem/1rem) */
-    padding: 6px 8px;   /* Reducimos el relleno/tamaño del recuadro */
-    background: rgba(0, 0, 0, 0.6); /* Fondito oscuro sutil */
+    font-size: 0.65rem !important; /* Ícono súper fino */
+    padding: 4px 6px !important;    /* Recuadro mínimo posible */
+    background: rgba(0, 0, 0, 0.55); /* Capa muy translúcida */
     color: #ffffff;
-    border-radius: 6px; /* Bordes ligeramente redondeados */
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;             /* Bordes finos */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     
-    /* Animación de pulso suave */
-    animation: pulsoIndicador 2s infinite ease-in-out;
+    /* Latido suave que mantiene los 2 segundos de ritmo */
+    animation: pulsoIndicador 2.2s infinite ease-in-out;
   }
 }
