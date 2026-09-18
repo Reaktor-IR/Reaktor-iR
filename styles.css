@@ -531,11 +531,7 @@ footer {
 
 
 
-/* ==========================================
-   ANIMACIÓN MÓVIL SÚPER COMPACTA Y DISCRETA (UX)
-   ========================================== */
 
-/* 1. Mensaje explicativo debajo del título */
 .instruccion-ux {
   font-size: 0.85rem;
   color: #a0a0a0;
@@ -545,14 +541,14 @@ footer {
   padding: 0 10px;
 }
 
-/* 2. Animación de latido MINIMALISTA (Cambios de escala de solo 12%) */
+
 @keyframes pulsoIndicador {
   0% {
     transform: scale(0.9);
     opacity: 0.7;
   }
   50% {
-    transform: scale(1.02); /* Latido apenas perceptible */
+    transform: scale(1.02); 
     opacity: 0.95;
   }
   100% {
@@ -561,10 +557,10 @@ footer {
   }
 }
 
-/* 3. Reglas para Móviles (<= 768px) */
+
 @media (max-width: 768px) {
 
-  /* Overlay transparente sin oscurecer la foto */
+ 
   .member-overlay {
     opacity: 1 !important;
     background: transparent !important;
@@ -573,18 +569,18 @@ footer {
     justify-content: center;
   }
 
-  /* ⬇️ RECUADRO Y ÍCONO MICRO-COMPACTOS ⬇️ */
+
   .member-overlay .expand-icon,
   .member-overlay i {
-    font-size: 0.65rem !important; /* Ícono súper fino */
-    padding: 4px 6px !important;    /* Recuadro mínimo posible */
-    background: rgba(0, 0, 0, 0.55); /* Capa muy translúcida */
+    font-size: 0.65rem !important; 
+    padding: 5px 7px !important;    
+    background: rgba(0, 0, 0, 0.55); 
     color: #ffffff;
-    border-radius: 4px;             /* Bordes finos */
+    border-radius: 4px;             
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     
-    /* Latido suave que mantiene los 2 segundos de ritmo */
-    animation: pulsoIndicador 2.2s infinite ease-in-out;
+ 
+    animation: pulsoIndicador 2.0s infinite ease-in-out;
   }
 }
