@@ -532,7 +532,7 @@ footer {
 
 
 /* ==========================================
-   NUEVA ANIMACIÓN DE PULSO PARA MÓVILES (UX)
+   ANIMACIÓN PARA MÓVILES (FOTOS BRILLANTES Y OVERLAY COMPACTO)
    ========================================== */
 
 /* 1. Mensaje explicativo debajo del título */
@@ -545,14 +545,14 @@ footer {
   padding: 0 10px;
 }
 
-/* 2. Definición de la animación de pulso (disminuir -> crecer -> normal) */
+/* 2. Definición de la animación de pulso */
 @keyframes pulsoIndicador {
   0% {
     transform: scale(0.85);
     opacity: 0.8;
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Crece solo un poquito */
     opacity: 1;
   }
   100% {
@@ -561,29 +561,30 @@ footer {
   }
 }
 
-/* 3. Reglas exclusivas para Dispositivos Móviles (pantallas <= 768px) */
+/* 3. Reglas para Móviles (<= 768px) */
 @media (max-width: 768px) {
 
-  /* Overlay visible de forma sutil en móviles */
+  /* Overlay transparente para no tapar la luz de la foto */
   .member-overlay {
     opacity: 1 !important;
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: transparent !important;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* Animación aplicada al recuadro / ícono en el centro de la foto */
+  /* ⬇️ RECUADRO MÁS PEQUEÑO Y DISCRETO ⬇️ */
   .member-overlay .expand-icon,
   .member-overlay i {
-    font-size: 1rem;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.65);
+    font-size: 0.75rem; /* Ícono más pequeño (antes era 0.9rem/1rem) */
+    padding: 6px 8px;   /* Reducimos el relleno/tamaño del recuadro */
+    background: rgba(0, 0, 0, 0.6); /* Fondito oscuro sutil */
     color: #ffffff;
-    border-radius: 50%; /* Puedes usar 8px si prefieres recuadro cuadrado en vez de círculo */
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px; /* Bordes ligeramente redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     
-    /* Animación continua de 2 segundos */
+    /* Animación de pulso suave */
     animation: pulsoIndicador 2s infinite ease-in-out;
   }
 }
